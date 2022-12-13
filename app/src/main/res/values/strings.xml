@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Testing Android Developer</string>
+    <string name="empty">Data kosong</string>
+    <string name="icon">icon</string>
 </resources>

@@ -2,11 +2,11 @@ package com.radenmas.testing_android_developer.model
 
 import com.google.gson.annotations.SerializedName
 
-data class ResponseJokes(
+ data class ResponseJokes(
 
 	@field:SerializedName("result")
-	val result: List<ResultItem?>? = null,
+	val result: List<ResultItem>,
 
 	@field:SerializedName("total")
-	val total: Int? = null
+	val total: Int
 )
