@@ -1,5 +1,6 @@
-package com.radenmas.testing_android_developer
+package com.radenmas.testing_android_developer.ui.part2
 
+import com.radenmas.testing_android_developer.BuildConfig
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

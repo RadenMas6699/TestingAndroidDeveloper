@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.part2.Part2Activity">
 
     <RelativeLayout
         android:id="@+id/appBar"
@@ -45,17 +45,6 @@
             android:textColorHint="@color/secondary_text"
             android:textSize="16sp"
             android:visibility="visible" />
-
-        <ImageView
-            android:id="@+id/imgSearch"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="16dp"
-            android:padding="5dp"
-            android:src="@drawable/ic_search"
-            app:tint="@color/white" />
     </RelativeLayout>
 
     <ProgressBar

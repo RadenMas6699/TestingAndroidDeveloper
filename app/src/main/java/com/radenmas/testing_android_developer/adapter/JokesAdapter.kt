@@ -24,14 +24,19 @@ class JokesAdapter(val context: Context) :
         private var bind: ListJokesBinding = ListJokesBinding.bind(view)
 
         fun bindJokes(response: ResultItem) {
-            val iconUrl = response.iconUrl.replace("https://assets.chucknorris.host/","https://api.chucknorris.io/")
+            response.let {
+                val iconUrl = it.iconUrl.replace(
+                    "https://assets.chucknorris.host/",
+                    "https://api.chucknorris.io/"
+                )
 
-            Glide.with(context)
-                .load(iconUrl)
-                .placeholder(R.drawable.ic_picture)
-                .into(bind.imgIcon)
-            bind.tvId.text = response.id
-            bind.tvJokes.text = response.value
+                Glide.with(context)
+                    .load(iconUrl)
+                    .placeholder(R.drawable.ic_picture)
+                    .into(bind.imgIcon)
+                bind.tvId.text = it.id
+                bind.tvJokes.text = it.value
+            }
         }
     }
 

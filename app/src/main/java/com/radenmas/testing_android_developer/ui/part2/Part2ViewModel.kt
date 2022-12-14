@@ -1,9 +1,8 @@
-package com.radenmas.testing_android_developer
+package com.radenmas.testing_android_developer.ui.part2
 
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ProgressBar
@@ -22,7 +21,7 @@ import retrofit2.Response
  * Created by RadenMas on 13/12/2022.
  */
 @SuppressLint("StaticFieldLeak")
-class MainViewModel(
+class Part2ViewModel(
     private val recyclerView: RecyclerView,
     private val progress: ProgressBar,
     private val empty: TextView,
@@ -59,7 +58,6 @@ class MainViewModel(
                     empty.visibility = View.GONE
                     items = response.body()?.result!!
                     for (c in items) {
-                        Log.d("TAG", items.toString())
                         adapter.setJokes(items)
                     }
                 }
