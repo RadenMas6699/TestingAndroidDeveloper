@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.part1.Part1Activity">
+    tools:context=".ui.part1.kotlin.Part1ActivityKotlin">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -31,18 +31,30 @@
         android:id="@+id/tvStatusService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btnStartService"
+        android:layout_above="@id/btnStartServiceJava"
         android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="32dp"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal|top"
+        android:lines="2"
+        android:textColor="@color/primary_text"
+        android:textSize="18sp" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartServiceJava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_above="@id/btnStartServiceKotlin"
+        android:text="Start Service using Java"
+        android:textAllCaps="false" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnStartService"
+        android:id="@+id/btnStartServiceKotlin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Start Service"
+        android:text="Start Service using Kotlin"
         android:textAllCaps="false" />
 
     <com.google.android.material.button.MaterialButton

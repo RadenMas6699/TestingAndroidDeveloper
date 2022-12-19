@@ -15,6 +15,13 @@
         android:theme="@style/Theme.TestingAndroidDeveloper"
         tools:targetApi="31">
         <activity
+            android:name=".ui.part1.java.Part1ActivityJava"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.part2.Part2Activity"
             android:exported="false">
             <meta-data
@@ -22,7 +29,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.part1.Part1Activity"
+            android:name=".ui.part1.kotlin.Part1ActivityKotlin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +43,12 @@
         </activity>
 
         <service
-            android:name=".ui.part1.MyService"
+            android:name=".ui.part1.kotlin.MyServiceKotlin"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".ui.part1.java.MyServiceJava"
             android:enabled="true"
             android:exported="false" />
     </application>

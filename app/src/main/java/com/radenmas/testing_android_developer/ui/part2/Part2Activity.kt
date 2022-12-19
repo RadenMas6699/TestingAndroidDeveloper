@@ -1,6 +1,7 @@
 package com.radenmas.testing_android_developer.ui.part2
 
 import android.os.Bundle
+import android.view.View
 import android.view.inputmethod.EditorInfo
 import androidx.appcompat.app.AppCompatActivity
 import com.radenmas.testing_android_developer.databinding.ActivityPart2Binding
@@ -28,6 +29,12 @@ class Part2Activity : AppCompatActivity() {
     }
 
     private fun onClick() {
+        bind.imgSearch.setOnClickListener {
+            bind.tvTitle.visibility = View.GONE
+            bind.etSearch.visibility = View.VISIBLE
+            bind.imgSearch.visibility=View.GONE
+        }
+
         bind.etSearch.setOnEditorActionListener { _, action, _ ->
             if (action == EditorInfo.IME_ACTION_SEARCH) {
                 val etSearch = bind.etSearch.text.toString().trim()
